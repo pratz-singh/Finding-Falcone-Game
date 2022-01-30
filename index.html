@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finding Falcon</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link active" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rules.html">Rules</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav collapse navbar-collapse justify-content-end">
+        <li class="nav-item" id="refresh">
+          <a class="nav-link" href="index.html">Refresh</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="heading">
+    <h1>Finding Falcon</h1>
+    <img src="images/king_shan.jpg">
+  </div>
+
+  <div id="total_dist" class="heading">
+    <p>Total Distance: 0</p>
+  </div>
+
+    <div id="form">
+      <div class="form-content">
+        <img src="images/planet-not-selected.png" alt="Planet1" id="image1" class= "image"><br>
+        <p id="dist1" class="distance"></p>
+        <select id="dropdown11" class="dropdown" onchange="myFunction1()">
+          <option value="starter" selected>Choose Planet 1</option>
+        </select>
+        <div id="html1" class="center"></div>
+        <button type="submit" class="submit" onclick="rocket1()">send rocket</button>
+      </div>
+      <div class="form-content">
+        <img src="images/planet-not-selected.png" alt="Planet1" id="image2" class= "image"><br>
+        <p id="dist2" class="distance"></p>
+        <select id="dropdown21" class="dropdown" onchange="myFunction2()">
+          <option value="starter" selected>Choose Planet 2</option>
+        </select>
+        <div id="html2" class="center"></div>
+        <button type="submit" class="submit" onclick="rocket2()">send rocket</button>
+      </div>
+      <div class="form-content">
+        <img src="images/planet-not-selected.png" alt="Planet1" id="image3" class= "image"><br>
+        <p id="dist3" class="distance"></p>
+        <select id="dropdown31" class="dropdown" onchange="myFunction3()">
+          <option value="starter" selected>Choose Planet 3</option>
+        </select>
+        <div id="html3" class="center"></div>
+        <button type="submit" class="submit" onclick="rocket3()">send rocket</button>
+      </div>
+      <div class="form-content">
+        <img src="images/planet-not-selected.png" alt="Planet1" id="image4" class= "image"><br>
+        <p id="dist4" class="distance"></p>
+        <select id="dropdown41" class="dropdown" onchange="myFunction4()">
+          <option value="starter" selected>Choose Planet 4</option>
+        </select>
+        <div id="html4" class="center"></div>
+        <button type="submit" class="submit" onclick="rocket4()">send rocket</button>
+      </div>
+    </div>
+
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Points to remember before playing</h3>
+        <p>Choose the Planet and Vehicle in ORDER ONLY</p>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+      // btn.onclick = function() {
+      //   modal.style.display = "block";
+      // }
+      
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      $( document ).ready(function() {
+        modal.style.display = "block";
+      });
+      
+      </script>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
